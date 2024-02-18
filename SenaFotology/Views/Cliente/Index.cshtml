@@ -16,39 +16,45 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   
 </head>
+User
 <body>
     <div class="contenedor-form">
         <div id="usuarioContainer">
+            @using (Html.BeginForm("PaginaCliente", "Cliente", FormMethod.Post))
+            {
                 <input type="hidden" name="user-type" value="Usuario">
                 <div class="header">
-                    <a href="#" class="selected" data-user-type="Usuario">USUARIO</a>
-                    <a href="#" data-user-type="Fotografo">FOTOGRAFO</a>
-                    <a href="#" data-user-type="Administrador">ADMINISTRADOR</a>
+                    <a href="@Url.Action("IniciarSesionUsuario", "Home")" class="selected" data-user-type="Usuario">USUARIO</a>
+                    @*    <a href="@Url.Action("IniciarSesionFotografo", "Home")" data-user-type="Fotografo">FOTOGRAFO</a>
+                <a href="@Url.Action("IniciarSesionAdministrador", "Home")" data-user-type="Administrador">ADMINISTRADOR</a> *@
                 </div>
-                <!-- Resto del formulario para Usuario -->
+
+                <hr>
+                <div class="fila">
+                    <label for="Email">Email</label>
+                    @Html.TextBox("Email", null, new { id = "Email" })
+                </div>
+                <div class="fila">
+                    <label for="Clave">Contraseña</label>
+                    @Html.Password("Clave", null, new { id = "Clave" })
+                </div>
+                <div class="fila">
+                    <input type="checkbox" class="check" id="mantener-sesion" name="mantener-sesion">
+                    <label for="mantener-sesion">Mantener Sesión</label>
+                </div>
+                <input type="submit" value="Iniciar Sesión" class="btn">
+                <p><a href="@Url.Action("RegistroUsuario", "Home")" id="switchToSignup">¿No tienes una cuenta? Regístrate aquí como Usuario.</a></p>
+            }
         </div>
 
-        <div id="fotografoContainer">
-                <input type="hidden" name="user-type" value="Fotografo">
-                <div class="header">
-                    <a href="#" data-user-type="Usuario">USUARIO</a>
-                    <a href="#" class="selected" data-user-type="Fotografo">FOTOGRAFO</a>
-                    <a href="#" data-user-type="Administrador">ADMINISTRADOR</a>
-                </div>
-                <!-- Resto del formulario para Fotógrafo -->
-        </div>
-
-        <div id="administradorContainer">
-                <input type="hidden" name="user-type" value="Administrador">
-                <div class="header">
-                    <a href="#" data-user-type="Usuario">USUARIO</a>
-                    <a href="#" data-user-type="Fotografo">FOTOGRAFO</a>
-                    <a href="#" class="selected" data-user-type="Administrador">ADMINISTRADOR</a>
-                </div>
-                <!-- Resto del formulario para Administrador -->
-        </div>
+        <!-- Repeat the above pattern for Fotografo and Administrador containers -->
 
         <hr>
+
+        <p>¿Eres fotógrafo? <a href="@Url.Action("IniciarSesionFotografo", "Fotografo")">Iniciar Sesión Como Fotógrafo</a></p>
+        <p>¿Eres Administrador? <a href="@Url.Action("IniciarSesionAdministrador", "Administrador")">Iniciar Sesión Como Administrador</a></p>
+
+
         <a href="#olvido" class="olvido">Olvidó la Contraseña</a>
     </div>
 
