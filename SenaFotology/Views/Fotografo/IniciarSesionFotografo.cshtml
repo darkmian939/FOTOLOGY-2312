@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     @* <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> *@
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="~/css/Administrador css/styles.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -19,7 +19,7 @@
 <body>
     <div class="contenedor-form">
         <div id="fotografoContainer">
-            @using (Html.BeginForm("IniciarSesionFotografo", "Home", FormMethod.Post))
+            @using (Html.BeginForm("PagFotografo", "Fotografo", FormMethod.Post))
             {
                 <input type="hidden" name="user-type" value="Usuario">
                 <div class="header">@* 
@@ -42,7 +42,7 @@
                     <label for="mantener-sesion">Mantener Sesión</label>
                 </div>
                 <input type="submit" value="Iniciar Sesión" class="btn">
-                <p><a href="@Url.Action("RegistroFotografo", "Home")" id="switchToSignup">¿No tienes una cuenta? Regístrate aquí como Fotografo.</a></p>
+                <p><a href="@Url.Action("RegistroFotografo", "Registro")" id="switchToSignup">¿No tienes una cuenta? Regístrate aquí como Fotografo.</a></p>
             }
         </div>
 
@@ -50,7 +50,9 @@
 
         <hr>
 
-        <p>¿Eres un Usuario/Cliente? <a href="@Url.Action("IniciarSesionUsuario", "Home")">Iniciar Sesión Como Usuario/Cliente</a></p>
+        <p>¿Eres un Usuario/Cliente? <a href="@Url.Action("Index", "Cliente")">Iniciar Sesión Como Usuario/Cliente</a></p>
+        <p>¿Eres un Administrador? <a href="@Url.Action("IniciarSesionAdministrador", "Admin")">Iniciar Sesión Como Administrador</a></p>
+
 
 
         <a href="#olvido" class="olvido">Olvidó la Contraseña</a>

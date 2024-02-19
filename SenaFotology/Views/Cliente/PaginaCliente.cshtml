@@ -9,14 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PagPrincipal</title>
-    <link rel="stylesheet" href="~/css/stylepagprincipal.css" />
-    <link rel="icon" href="../PROYECTO SENA/LOGOA.png" />
+    <link rel="stylesheet" href="~/css/Cliente css/stylepagprincipal.css" />
+    <link rel="icon" href="~/Recursos/LOGOA.png" />
     <script src="https://kit.fontawesome.com/9bf48cfb4e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
         <div class="logo">
-            <img src="" alt="Logo" />
+            <img src="~/Recursos/LOGO.png" alt="Logo" />
         </div>
         <nav>
             <ul class="linksnav">
@@ -27,15 +27,16 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
-        <a class="btn" href="./iniciosesion.html"><button>Cerrar Sesion</button></a>
+        <a class="btn" href="@Url.Action("Index", "Cliente")"><button>Cerrar Sesion</button></a>
     </header>
 
     <div class="carrusel">
         <ul>
-            <li><img src="../PROYECTO SENA/Carr1.jpg" alt="" /></li>
-            <li><img src="../PROYECTO SENA/Carr1.jpg" alt="" /></li>
-            <li><img src="../PROYECTO SENA/Carr1.jpg" alt="" /></li>
-            <li><img src="../PROYECTO SENA/Carr1.jpg" alt="" /></li>
+            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
+            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
+            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
+            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
+
         </ul>
     </div>
     <div class="fdestacados">
@@ -43,7 +44,7 @@
         <h2>Destacados</h2>
     </div>
     <div class="contenedor">
-        <img class="imagen" src="../PROYECTO SENA/Paisaje1.jpg" alt="Paisaje" />
+        <img class="imagen" src="~/Recursos/Paisaje1.jpg" alt="Paisaje" />
         <div class="texto">
             <h1 class="nombre">Erick Ricaurte</h1>
             <p>
