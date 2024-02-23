@@ -11,37 +11,49 @@ namespace SenaFotology.Controllers
             return View();
         }
 
-        public ActionResult IniciarSesionFotografo()
+        public IActionResult Indexfotografo()
         {
-            // Lógica de la acción IniciarSesionFotografo
+            // Aquí puedes devolver la vista de la página principal del fotógrafo
             return View();
         }
 
-        [HttpPost]
-        public ActionResult IniciarSesionFotografo(LoginViewModel model)
+        // GET: Fotografo/IniciarSesionFotografo
+        public ActionResult IniciarSesionFotografo()
         {
-            // Aquí deberías implementar la lógica de autenticación
-            // Verifica el correo electrónico y la contraseña en tu base de datos
-            // En un escenario real, reemplaza el siguiente código con tu propia lógica
-
-            if (IsValidUser(model.Email, model.Clave))
-            {
-                // Redirige a un panel de usuario o página principal después de un inicio de sesión exitoso
-                return RedirectToAction("FotografoPagina");
-            }
-            else
-            {
-                // Redirige de nuevo a la página de inicio de sesión con un mensaje de error
-                return RedirectToAction("Index", new { error = "Credenciales inválidas" });
-            }
+            return View();
         }
 
+        // POST: Fotografo/IniciarSesionFotografo
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult IniciarSesionFotografo(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Aquí deberías implementar la lógica de autenticación
+                // Verifica el correo electrónico y la contraseña en tu base de datos
+                // En un escenario real, reemplaza el siguiente código con tu propia lógica
+
+                if (IsValidUser(model.Email, model.Clave))
+                {
+                    // Redirige a la página principal del fotógrafo después de un inicio de sesión exitoso
+                    return RedirectToAction("PagFotografo");
+                }
+                else
+                {
+                    // Redirige de nuevo a la página de inicio de sesión con un mensaje de error
+                    ModelState.AddModelError(string.Empty, "Credenciales inválidas");
+                    return View(model);
+                }
+            }
+            // Si hay errores de validación, vuelve a mostrar la vista de inicio de sesión con los errores
+            return View(model);
+        }
+
+        // Método de simulación de validación de usuario
         private bool IsValidUser(string email, string clave)
         {
-            // Lógica de validación de usuario
-            // Por ejemplo, puedes consultar tu base de datos para validar las credenciales
-
-            // Simulando una validación simple
+            // Simulación de validación simple
             return (email == "usuario@dominio.com" && clave == "contraseña");
         }
 

@@ -17,7 +17,9 @@
             cursor: pointer;
         }
     </style>
-    <link rel="stylesheet" href="~/css/styleadministrador.css"> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
+    <link rel="stylesheet" href="~/css/Administrador css/styleadministrador.css"> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
     <title>Panel de Administrador</title>
 </head>
 <body>
@@ -30,7 +32,7 @@
                 <li><a href="#">Inicio</a></li>
             </ul>
         </nav>
-        <a class="btn" href="@Url.Action("Index", "Home")">
+        <a class="btn" href="@Url.Action("IniciarSesionAdministrador", "Admin")">
             <button>Cerrar Sesión</button>
         </a>
     </header>
@@ -38,7 +40,7 @@
     <div class="container">
         <h1>Panel de Administrador</h1>
         <button class="filter-btn">
-            <a href="@Url.Action("PagAdministrador", "Home")">Fotografos</a>
+            <a href="@Url.Action("PagAdministrador", "Admin")">Fotografos</a>
         </button>
         <button class="filter-btn" onclick="filterData('Clientes')">Clientes</button>
         <table>

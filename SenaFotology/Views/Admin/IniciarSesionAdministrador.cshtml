@@ -10,20 +10,20 @@
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="~/css/Registro y index/styleiniciosesion.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
     <div class="contenedor-form">
-        @using (Html.BeginForm("IniciarSesionAdministrador", "Home", FormMethod.Post))
+        @using (Html.BeginForm("PagAdministrador", "Admin", FormMethod.Post))
         {
             <input type="hidden" name="user-type" value="Administrador">
             <div class="header">
                 @* <a href="#" data-user-type="Usuario">USUARIO</a>
 
-                <a href="#" data-user-type="Fotografo">FOTOGRAFO</a> *@
+            <a href="#" data-user-type="Fotografo">FOTOGRAFO</a> *@
                 @* <a href="@Url.Action("IniciarSesionFotografo", "Home")" data-user-type="Fotografo">FOTOGRAFO</a> *@
 
 
@@ -52,13 +52,15 @@
 
 
 
-    <!-- Repeat the above pattern for Usuario and Fotografo containers -->
+        <!-- Repeat the above pattern for Usuario and Fotografo containers -->
 
-    <hr>
+        <hr>
 
-    <p>¿Eres fotógrafo? <a href="@Url.Action("IniciarSesionFotografo", "Home")">Iniciar Sesión Como Fotógrafo</a></p>
-    <p>¿Eres un Usuario/Cliente? <a href="@Url.Action("IniciarSesionUsuario", "Home")">Iniciar Sesión Como Usuario/Cliente</a></p>
-    <a href="#olvido" class="olvido">Olvidó la Contraseña</a>
+        <p>¿Eres fotógrafo? <a href="@Url.Action("IniciarSesionFotografo", "Fotografo")">Iniciar Sesión Como Fotógrafo</a></p>
+        <p>¿Eres Usuario/Cliente? <a href="@Url.Action("Index", "Cliente")">Iniciar Sesión Como Administrador</a></p>
+
+
+        <a href="#olvido" class="olvido">Olvidó la Contraseña</a>
 
     </div>
     <script src="~/js/script.js"></script>

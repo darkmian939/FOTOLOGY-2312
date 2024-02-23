@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/styleadministrador.css"> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
+    <link rel="stylesheet" href="~/css/Administrador css/styleadministrador.css"> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
     <title>Panel de Administrador</title>
@@ -21,7 +21,7 @@
                 <li><a href="#">Inicio</a></li>
             </ul>
         </nav>
-        <a class="btn" href="@Url.Action("Index", "Home")">
+        <a class="btn" href="@Url.Action("IniciarSesionAdministrador", "Admin")">
             <button>Cerrar Sesión</button>
         </a>
     </header>
@@ -30,7 +30,7 @@
         <h1>Panel de Administrador</h1>
         <button class="filter-btn" onclick="filterData('Fotografos')">Fotografos</button>
         <button class="filter-btn">
-            <a href="@Url.Action("PagClienteCrud", "Home")">Clientes</a>
+            <a href="@Url.Action("PagClienteCrud", "Admin")">Clientes</a>
         </button> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de rutas -->
         <table>
             <thead>
@@ -47,50 +47,50 @@
             <tbody>
                 @* @using (var conexion = new SqlConnection("tu_cadena_de_conexion")) <!-- Ajusta la cadena de conexión a tu base de datos -->
                 {
-                    conexion.Open();
-                    var sql = "SELECT * FROM fotografo";
-                    var datos = conexion.Query<dynamic>(sql);
+                conexion.Open();
+                var sql = "SELECT * FROM fotografo";
+                var datos = conexion.Query<dynamic>(sql);
 
-                    foreach (var dato in datos)
-                    {
-                        <tr>
-                            <td>@dato.IDfotografo</td>
-                            <td>@dato.Nombre_fotografo</td>
-                            <td>@dato.Email</td>
-                            <td>@dato.Contraseña</td>
-                            <td>@dato.Direccion</td>
-                            <td>@dato.Telefono</td>
-                            <td>
-                                <!-- Formulario para enviar la solicitud de eliminación -->
-                                <form method="post" action="@Url.Action("EliminarFotografo", "TuControlador")"> <!-- Ajusta el nombre del controlador según tu configuración -->
-                                    <input type="hidden" name="eliminar_id" value="@dato.IDfotografo" />
-                                    <button type="submit" class="eliminar-btn">Eliminar</button>
-                                </form>
-                            </td>
-                        </tr>
-                    }
+                foreach (var dato in datos)
+                {
+                <tr>
+                <td>@dato.IDfotografo</td>
+                <td>@dato.Nombre_fotografo</td>
+                <td>@dato.Email</td>
+                <td>@dato.Contraseña</td>
+                <td>@dato.Direccion</td>
+                <td>@dato.Telefono</td>
+                <td>
+                <!-- Formulario para enviar la solicitud de eliminación -->
+                <form method="post" action="@Url.Action("EliminarFotografo", "TuControlador")"> <!-- Ajusta el nombre del controlador según tu configuración -->
+                <input type="hidden" name="eliminar_id" value="@dato.IDfotografo" />
+                <button type="submit" class="eliminar-btn">Eliminar</button>
+                </form>
+                </td>
+                </tr>
+                }
                 } *@
             </tbody>
         </table>
     </div>
 
- @*    @if (IsPost && !string.IsNullOrEmpty(Request["eliminar_id"]))
+    @*    @if (IsPost && !string.IsNullOrEmpty(Request["eliminar_id"]))
     {
-        var eliminarId = Request["eliminar_id"];
-        using (var conexion = new SqlConnection("tu_cadena_de_conexion")) <!-- Ajusta la cadena de conexión a tu base de datos -->
-        {
-            conexion.Open();
-            var sql = $"DELETE FROM fotografo WHERE IDfotografo = {eliminarId}";
-            var resultado = conexion.Execute(sql);
-            if (resultado > 0)
-            {
-                <p>Registro eliminado correctamente.</p>
-            }
-            else
-            {
-                <p>Error al eliminar el registro.</p>
-            }
-        }
+    var eliminarId = Request["eliminar_id"];
+    using (var conexion = new SqlConnection("tu_cadena_de_conexion")) <!-- Ajusta la cadena de conexión a tu base de datos -->
+    {
+    conexion.Open();
+    var sql = $"DELETE FROM fotografo WHERE IDfotografo = {eliminarId}";
+    var resultado = conexion.Execute(sql);
+    if (resultado > 0)
+    {
+    <p>Registro eliminado correctamente.</p>
+    }
+    else
+    {
+    <p>Error al eliminar el registro.</p>
+    }
+    }
     } *@
 
 </body>

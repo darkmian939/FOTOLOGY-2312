@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Cliente\" />
     <Folder Include="Views\Fotografo\" />
   </ItemGroup>
 

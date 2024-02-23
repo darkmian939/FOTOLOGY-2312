@@ -44,7 +44,7 @@ namespace SenaFotology.Controllers
             return View();
         }
 
-        public ActionResult PaginaFotografo()
+        public ActionResult Fotografos()
         {
             return View();
         }
