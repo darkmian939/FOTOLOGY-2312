@@ -23,6 +23,11 @@ namespace SenaFotology.Controllers
             return View();
         }
 
+        public ActionResult olvidocontraseñaFot()
+        {
+            return View();
+        }
+
         // POST: Fotografo/IniciarSesionFotografo
         [HttpPost]
         [ValidateAntiForgeryToken]

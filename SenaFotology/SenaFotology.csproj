@@ -13,8 +13,4 @@
     <None Remove="Views\Login\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Fotografo\" />
-  </ItemGroup>
-
 </Project>
