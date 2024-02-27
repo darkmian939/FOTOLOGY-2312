@@ -1,11 +1,34 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SenaFotology.Models;
 using static SenaFotology.Models.LoginViewModel;
+
 namespace SenaFotology.Controllers
 {
     public class RegistroController : Controller
     {
-        // GET: /Registro/Index
-        public ActionResult Index()
+        // GET: /Registro/IndexCliente
+        public ActionResult RegistroUsuario()
+        {
+            return View();
+        }
+
+        // GET: /Registro/CreateCliente
+        public ActionResult CreateCliente()
+        {
+            return View();
+        }
+
+        // POST: /Registro/CreateCliente
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateCliente(RegistroUsuarioViewModel model)
+        {
+            // Lógica para registrar un Cliente
+            return RedirectToAction("RegistroUsuario");
+        }
+
+        // GET: /Registro/IndexFotografo
+        public ActionResult RegistroFotografo()
         {
             return View();
         }
@@ -21,25 +44,8 @@ namespace SenaFotology.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult CreateFotografo(RegistroFotografoViewModel model)
         {
-            // Lógica para registrar un fotógrafo
-            return RedirectToAction("Index");
+            // Lógica para registrar un Fotógrafo
+            return RedirectToAction("RegistroFotografo");
         }
-
-        // GET: /Registro/CreateUsuario
-        public ActionResult CreateUsuario()
-        {
-            return View();
-        }
-
-        // POST: /Registro/CreateUsuario
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult CreateUsuario(RegistroUsuarioViewModel model)
-        {
-            // Lógica para registrar un usuario
-            return RedirectToAction("Index");
-        }
-
-        // Resto de las acciones del controlador para Editar, Borrar, etc.
     }
 }

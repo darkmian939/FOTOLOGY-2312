@@ -22,23 +22,30 @@
                 <input type="email" id="email" name="email" required>
                 <input type="submit" value="Enviar solicitud">
             </form>
-        </div>
-
-        <footer class="footer">
-            <div class="redes-sociales">
-                <a href="https://www.facebook.com/tufotology" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/tufotology" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.twitter.com/tufotology" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
+            <div class="contenedor-boton">
+                <button class="boton-volver" onclick="goBack()">Volver</button>
             </div>
-            <p>&copy; 2024 Fotology. Todos los derechos reservados.</p>
-        </footer>
+        </div>
     </div>
+    <footer class="footer">
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/tufotology" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/tufotology" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com/tufotology" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Fotology. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
-

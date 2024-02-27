@@ -2,7 +2,6 @@
     Layout = null; // Evita que utilices un diseño predeterminado si lo tienes configurado
 }
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="logo-container">FOTOLOGY<img src="~/Recursos/LOGO.png" class="logo"></h1>
+        <h1 class="logo-container">FOTOLOGY <br /><img src="~/Recursos/LOGO.png" class="logo"></h1>
         <h2>Olvidé mi contraseña</h2>
         <div class="texto">
             Por favor, introduce tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña.
@@ -23,23 +22,32 @@
                 <input type="email" id="email" name="email" required>
                 <input type="submit" value="Enviar solicitud">
             </form>
-        </div>
-
-        <footer class="footer">
-            <div class="redes-sociales">
-                <a href="https://www.facebook.com/tufotology" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/tufotology" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.twitter.com/tufotology" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
+            <div class="contenedor-boton">
+                <button class="boton-volver" onclick="goBack()">Volver</button>
             </div>
-            <p>&copy; 2024 Fotology. Todos los derechos reservados.</p>
-        </footer>
+        </div>
     </div>
+    <footer class="footer">
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/tufotology" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/tufotology" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com/tufotology" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Fotology. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
+
 

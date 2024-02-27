@@ -14,18 +14,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h1, h2 {
     color: #ff8c00; /* Naranja */
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #ff8c00; /* Naranja */
-    margin-top: 0;
-}
-
-p {
-    color: #ffffff; /* Texto oscuro */
+    margin: 0;
 }
 
 .texto {
@@ -38,7 +29,7 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="email"] {
+input[type="email"], input[type="submit"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
@@ -50,39 +41,37 @@ input[type="email"] {
 input[type="submit"] {
     background-color: #ffdb58; /* Amarillo */
     color: #333; /* Texto oscuro */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    width: 100%;
 }
 
     input[type="submit"]:hover {
         background-color: #ffd700; /* Amarillo dorado */
     }
 
+.contenedor-boton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boton-volver {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .boton-volver:hover {
+        background-color: #ffcc00;
+    }
+
 .footer {
     background-color: #000000;
     color: #fff;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    left: 0; /* Ajuste para que esté pegado al lado izquierdo */
-    width: 100%;
-}
-
-.redes-sociales {
+    padding: 25px;
     text-align: center;
 }
-
-    .redes-sociales a {
-        margin: 0 10px;
-        color: #ffffff; /* Color blanco */
-    }
-
-    .redes-sociales img {
-        width: 30px;
-    }
 
 .logo-container {
     display: flex;
