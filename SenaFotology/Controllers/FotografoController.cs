@@ -22,6 +22,20 @@ namespace SenaFotology.Controllers
         {
             return View();
         }
+        public ActionResult PaginaCategorias()
+        {
+            return View();
+        }
+
+        public ActionResult PaginaAyuda()
+        {
+            return View();
+        }
+
+        public ActionResult PaginaContacto()
+        {
+            return View();
+        }
 
 
         // POST: Fotografo/IniciarSesionFotografo
