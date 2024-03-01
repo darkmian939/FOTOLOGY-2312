@@ -1,13 +1,15 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    margin: 0;
+﻿* {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #dfdcdc;
 }
 
 /* Header */
-
 .header {
     background-color: #14150f;
     display: flex;
@@ -72,6 +74,15 @@
             color: #ffc403;
             transform: scale(1.1);
         }
+
+.nombre-cliente {
+    font-size: 16px;
+    font-weight: bold;
+    color: white; /* Cambia el color del texto a blanco */
+    margin-right: 5px; /* Ajusta el margen derecho según sea necesario */
+    margin-top: 0px; /* Ajusta el margen superior según sea necesario */
+}
+
 
 /* Categorias */
 .categorias h1 {

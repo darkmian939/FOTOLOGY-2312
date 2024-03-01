@@ -68,6 +68,13 @@ body {
     font-size: 14px;
 }
 
+.nombre-cliente {
+    font-size: 16px;
+    font-weight: bold;
+    color: white; /* Cambia el color del texto a blanco */
+    margin-right: 5px; /* Ajusta el margen derecho según sea necesario */
+    margin-top: 0px; /* Ajusta el margen superior según sea necesario */
+}
 
 
 .contenedor-form .fila .check {

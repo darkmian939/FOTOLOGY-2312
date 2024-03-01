@@ -103,6 +103,12 @@ namespace SenaFotology.Controllers
         {
             return View();
         }
+        public ActionResult Configuraciones()
+        {
+            // Lógica para mostrar la página de configuración de usuario
+            return View("Configuraciones");
+        }
+
 
         // CONTROLADOR DE USUARIO //
 

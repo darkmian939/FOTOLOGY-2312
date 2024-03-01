@@ -15,6 +15,7 @@
 </head>
 <body>
     <script src="~/js/dropdown.js"></script>
+
     <header class="header">
         <div class="logo">
             <img src="../Recursos/LOGOA.png" alt="Logo" />
@@ -32,12 +33,15 @@
                     </a>
                     <div class="dropdown-content">
                         <a href="#">Perfil</a>
-                        <a href="#">Configuración</a>
+                        <a href="@Url.Action("Configuraciones", "Cliente")">Configuración</a>
                         <a href="@Url.Action("Index", "Cliente")">Cerrar sesión</a>
                     </div>
                 </li>
             </ul>
         </nav>
+        <div class="nombre-cliente">Bienvenido, Erik Chaves</div>
+    </header>
+
     </header>
     <div class="container">
         <h2>¡Bienvenido a nuestra página de ayuda!</h2>
