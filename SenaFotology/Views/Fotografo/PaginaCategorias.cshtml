@@ -1,31 +1,25 @@
 ﻿@{
-    Layout = null;
+    Layout = null; // Esto evita que utilices un diseño predeterminado si lo tienes configurado
 }
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PagPrincipal</title>
-    <link rel="stylesheet" href="~/css/Cliente css/stylepagprincipal.css" />
-    <link rel="icon" href="~/Recursos/LOGOA.png" />
-    <script src="https://kit.fontawesome.com/9bf48cfb4e.js" crossorigin="anonymous"></script>
+    <title>Categorías de Fotografías</title>
+    <link rel="stylesheet" href="~/css/Cliente css/stylecategorias.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <script src="~/js/dropdown.js"></script>
-
     <header class="header">
         <div class="logo">
             <img src="../Recursos/LOGOA.png" alt="Logo" />
         </div>
         <nav>
             <ul class="linksnav">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="@Url.Action("Indexfotografo", "Fotogragos")">Fotografos</a></li>
+                <li><a href="@Url.Action("Indexfotografo", "Fotografo")">Inicio</a></li>
                 <li><a href="@Url.Action("PaginaCategorias", "Fotografo")">Categorias</a></li>
                 <li><a href="#">Portafolio</a></li>
                 <li><a href="@Url.Action("PaginaAyuda", "Fotografo")">Ayuda</a></li>
@@ -43,57 +37,6 @@
             </ul>
         </nav>
     </header>
-    <div class="carrusel">
-        <ul>
-            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
-            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
-            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
-            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
-
-        </ul>
-    </div>
-    <div class="fdestacados">
-        <h1>Fotografos</h1>
-        <h2>Destacados</h2>
-    </div>
-    <div class="contenedor">
-        <img class="imagen" src="~/Recursos/Paisaje1.jpg" alt="Paisaje" />
-        <div class="texto">
-            <h1 class="nombre">Erick Ricaurte</h1>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea officiis
-                quis optio voluptatem deleniti, labore cumque, debitis neque, dolor
-                autem consequatur beatae. Quam excepturi rem, eaque quasi ad esse
-                harum?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-                officiis quis optio voluptatem deleniti, labore cumque, debitis neque,
-                dolor autem consequatur beatae. Quam excepturi rem, eaque quasi ad
-                esse harum?Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Ea officiis quis optio voluptatem deleniti, labore cumque, debitis
-                neque, dolor autem consequatur beatae. Quam excepturi rem, eaque quasi
-                ad esse harum?Lorem ipsum, dolor sit amet consectetur adipisicing
-                elit. Ea officiis quis optio voluptatem deleniti, labore cumque,
-                debitis neque, dolor autem consequatur beatae. Quam excepturi rem,
-                eaque quasi ad esse harum?Lorem ipsum.
-            </p>
-            <a class="mas" href="#"><button>Saber mas</button></a>
-        </div>
-    </div>
-    <div class="categorias">
-        <h1>Categorias</h1>
-        <h2>Principales</h2>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea officiis
-            quis optio voluptatem deleniti, labore cumque, debitis neque, dolor
-            autem consequatur beatae. Quam excepturi rem, eaque quasi ad esse
-            harum?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-            officiis quis optio voluptatem deleniti, labore cumque, debitis neque,
-            dolor autem consequatur beatae. Quam excepturi rem, eaque quasi ad esse
-            harum?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-            officiis quis optio voluptatem deleniti, labore cumque, debitis neque,
-            dolor autem consequatur beatae. Quam excepturi rem, eaque quasi ad esse
-            harum?
-        </p>
-    </div>
     <div class="container-card">
         <div class="card">
             <figure>
@@ -106,7 +49,15 @@
                     officiis quis optio voluptatem deleniti, labore cumque, debitis
                     neque, dolor autem consequatur beatae.
                 </p>
-                <a class="smas" href="#"><button>Ver</button></a>
+                <input type="text" placeholder="Deja un comentario" />
+                <select>
+                    <option value="1">1 Estrella</option>
+                    <option value="2">2 Estrellas</option>
+                    <option value="3">3 Estrellas</option>
+                    <option value="4">4 Estrellas</option>
+                    <option value="5">5 Estrellas</option>
+                </select>
+                <button>Enviar</button>
             </div>
         </div>
         <div class="card">
@@ -120,9 +71,19 @@
                     officiis quis optio voluptatem deleniti, labore cumque, debitis
                     neque, dolor autem consequatur beatae.
                 </p>
-                <a class="smas" href="#"><button>Ver</button></a>
+                <input type="text" placeholder="Deja un comentario" />
+                <select>
+                    <option value="1">1 Estrella</option>
+                    <option value="2">2 Estrellas</option>
+                    <option value="3">3 Estrellas</option>
+                    <option value="4">4 Estrellas</option>
+                    <option value="5">5 Estrellas</option>
+                </select>
+                <button>Enviar</button>
             </div>
         </div>
+        </div>
+    <div class="container-card">
         <div class="card">
             <figure>
                 <img src="https://www.formacionyestudios.com/wp-content/uploads/2018/09/como-ser-modelo.jpg" />
@@ -134,7 +95,15 @@
                     officiis quis optio voluptatem deleniti, labore cumque, debitis
                     neque, dolor autem consequatur beatae.
                 </p>
-                <a class="smas" href="#"><button>Ver</button></a>
+                <input type="text" placeholder="Deja un comentario" />
+                <select>
+                    <option value="1">1 Estrella</option>
+                    <option value="2">2 Estrellas</option>
+                    <option value="3">3 Estrellas</option>
+                    <option value="4">4 Estrellas</option>
+                    <option value="5">5 Estrellas</option>
+                </select>
+                <button>Enviar</button>
             </div>
         </div>
         <div class="card">
@@ -148,9 +117,18 @@
                     officiis quis optio voluptatem deleniti, labore cumque, debitis
                     neque, dolor autem consequatur beatae.
                 </p>
-                <a class="smas" href="#"><button>Ver</button></a>
+                <input type="text" placeholder="Deja un comentario" />
+                <select>
+                    <option value="1">1 Estrella</option>
+                    <option value="2">2 Estrellas</option>
+                    <option value="3">3 Estrellas</option>
+                    <option value="4">4 Estrellas</option>
+                    <option value="5">5 Estrellas</option>
+                </select>
+                <button>Enviar</button>
             </div>
         </div>
     </div>
+
 </body>
 </html>
