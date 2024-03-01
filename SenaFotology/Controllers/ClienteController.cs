@@ -71,11 +71,6 @@ namespace SenaFotology.Controllers
             return View();
         }
 
-        public ActionResult olvidocontraseña()
-        {
-            return View();
-        }
-
         [HttpPost]
         public ActionResult IniciarSesionFotografo(LoginViewModel model)
         {
@@ -101,6 +96,10 @@ namespace SenaFotology.Controllers
         }
 
         public ActionResult EditarPerfil()
+        {
+            return View();
+        }
+        public ActionResult olvidocontraseña()
         {
             return View();
         }
