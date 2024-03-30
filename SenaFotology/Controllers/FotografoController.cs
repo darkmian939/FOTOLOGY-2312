@@ -27,6 +27,11 @@ namespace SenaFotology.Controllers
             return View();
         }
 
+        public ActionResult PaginaFotografo()
+        {
+            return View();
+        }
+
         public ActionResult PaginaAyuda()
         {
             return View();

@@ -24,10 +24,9 @@
         </div>
         <nav>
             <ul class="linksnav">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="@Url.Action("Indexfotografo", "Fotogragos")">Fotografos</a></li>
+                <li><a href="@Url.Action("Indexfotografo", "Fotografo")">Inicio</a></li>
+                <li><a href="@Url.Action("PaginaFotografo", "Fotografo")">Fotografos</a></li>
                 <li><a href="@Url.Action("PaginaCategorias", "Fotografo")">Categorias</a></li>
-                <li><a href="#">Portafolio</a></li>
                 <li><a href="@Url.Action("PaginaAyuda", "Fotografo")">Ayuda</a></li>
                 <li><a href="@Url.Action("PaginaContacto", "Fotografo")">Contacto</a></li>
                 <li class="dropdown">
@@ -35,14 +34,17 @@
                         <i class="fas fa-user"></i>
                     </a>
                     <div class="dropdown-content">
-                        <a href="#">Perfil</a>
-                        <a href="#">Configuración</a>
-                        <a href="@Url.Action("IniciarSesionFotografo", "Fotografo")">Cerrar sesión</a>
+                        <a href="@Url.Action("PerfilCliente", "Cliente")">Perfil</a>
+                        <a href="@Url.Action("Configuraciones", "Cliente")">Configuración</a>
+                        <a href="@Url.Action("Index", "Cliente")">Cerrar sesión</a>
                     </div>
                 </li>
             </ul>
         </nav>
+        <div class="nombre-cliente">Bienvenido, Erik Chaves</div>
     </header>
+
+
     <div class="carrusel">
         <ul>
             <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>

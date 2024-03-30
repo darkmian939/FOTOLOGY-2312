@@ -44,6 +44,11 @@ namespace SenaFotology.Controllers
             return View();
         }
 
+        public ActionResult PerfilCliente()
+        {
+            return View();
+        }
+
         public ActionResult Fotografos()
         {
             return View();

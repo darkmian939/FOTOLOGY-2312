@@ -1,4 +1,4 @@
-* {
+ï»¿* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -79,8 +79,8 @@ body {
     font-size: 16px;
     font-weight: bold;
     color: white; /* Cambia el color del texto a blanco */
-    margin-right: 5px; /* Ajusta el margen derecho según sea necesario */
-    margin-top: 0px; /* Ajusta el margen superior según sea necesario */
+    margin-right: 5px; /* Ajusta el margen derecho segï¿½n sea necesario */
+    margin-top: 0px; /* Ajusta el margen superior segï¿½n sea necesario */
 }
 
 /* Carrusel */
@@ -297,7 +297,7 @@ body {
         transform: scale(1.1);
     }
 
-    /*menu DESPLEGABLE */
+/*menu DESPLEGABLE */
 .dropdown {
     position: relative;
     display: inline-block;

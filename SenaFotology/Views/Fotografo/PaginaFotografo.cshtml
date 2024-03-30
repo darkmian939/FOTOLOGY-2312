@@ -1,14 +1,19 @@
 ﻿@{
-    Layout = null; // Esto evita que utilices un diseño predeterminado si lo tienes configurado
+    Layout = null;
 }
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fotógrafos</title>
-    <link rel="stylesheet" href="~/css/stylefotografos.css" />
+    <title>PagPrincipal</title>
+    <link rel="stylesheet" href="~/css/Cliente css/Fotografos.css" />
+    <link rel="icon" href="~/Recursos/LOGOA.png" />
+    <script src="https://kit.fontawesome.com/9bf48cfb4e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <script src="~/js/dropdown.js"></script>
@@ -19,55 +24,88 @@
         </div>
         <nav>
             <ul class="linksnav">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Fotografos</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Portafolio</a></li>
-                <li><a href="#">Ayuda</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="@Url.Action("PaginaCliente", "Cliente")">Inicio</a></li>
+                <li><a href="@Url.Action("Fotografos", "Cliente")">Fotografos</a></li>
+                <li><a href="@Url.Action("PaginaCategorias", "Cliente")">Categorias</a></li>
+                <li><a href="@Url.Action("PaginaAyuda", "Cliente")">Ayuda</a></li>
+                <li><a href="@Url.Action("PaginaContacto", "Cliente")">Contacto</a></li>
                 <li class="dropdown">
                     <a href="#">
                         <i class="fas fa-user"></i>
                     </a>
                     <div class="dropdown-content">
-                        <a href="#">Perfil</a>
-                        <a href="#">Configuración</a>
+                        <a href="@Url.Action("PerfilCliente", "Cliente")">Perfil</a>
+                        <a href="@Url.Action("Configuraciones", "Cliente")">Configuración</a>
                         <a href="@Url.Action("Index", "Cliente")">Cerrar sesión</a>
                     </div>
                 </li>
             </ul>
         </nav>
+        <div class="nombre-cliente">Bienvenido, Erik Chaves</div>
     </header>
 
-    <div class="container">
-        <h1>Fotógrafos Destacados</h1>
-        <div class="card">
-            <img src="fotografo1.jpg" alt="Fotógrafo 1" />
-            <h2>Fotógrafo 1</h2>
-            <p>Descripción breve del Fotógrafo 1.</p>
-            <a href="fotografo1.html" class="ver-mas">Ver Más</a>
-        </div>
+    <div class="categorias">
+        <h1>Fotógrafos</h1>
+    </div>
 
+    <div class="container-card">
         <div class="card">
-            <img src="fotografo2.jpg" alt="Fotógrafo 2" />
-            <h2>Fotógrafo 2</h2>
-            <p>Descripción breve del Fotógrafo 2.</p>
-            <a href="fotografo2.html" class="ver-mas">Ver Más</a>
+            <figure>
+                <img src="~/Recursos/fotografo1.jpg" alt="Fotógrafo 1" />
+            </figure>
+            <div class="contenido-card">
+                <h3>Fotógrafo 1</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+                    officiis quis optio voluptatem deleniti, labore cumque, debitis
+                    neque, dolor autem consequatur beatae.
+                </p>
+                <a class="smas" href="#"><button>Ver</button></a>
+            </div>
         </div>
-
         <div class="card">
-            <img src="fotografo3.jpg" alt="Fotógrafo 3" />
-            <h2>Fotógrafo 3</h2>
-            <p>Descripción breve del Fotógrafo 3.</p>
-            <a href="fotografo3.html" class="ver-mas">Ver Más</a>
+            <figure>
+                <img src="~/Recursos/fotografo2.jpg" />
+            </figure>
+            <div class="contenido-card">
+                <h3>Fotografo 2</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+                    officiis quis optio voluptatem deleniti, labore cumque, debitis
+                    neque, dolor autem consequatur beatae.
+                </p>
+                <a class="smas" href="#"><button>Ver</button></a>
+            </div>
         </div>
-
         <div class="card">
-            <img src="fotografo4.jpg" alt="Fotógrafo 4" />
-            <h2>Fotógrafo 4</h2>
-            <p>Descripción breve del Fotógrafo 4.</p>
-            <a href="fotografo4.html" class="ver-mas">Ver Más</a>
+            <figure>
+                <img src="~/Recursos/fotografo3.jpg" />
+            </figure>
+            <div class="contenido-card">
+                <h3>Fotografo 3</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+                    officiis quis optio voluptatem deleniti, labore cumque, debitis
+                    neque, dolor autem consequatur beatae.
+                </p>
+                <a class="smas" href="#"><button>Ver</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="~/Recursos/fotografo4.jpg" />
+            </figure>
+            <div class="contenido-card">
+                <h3>Fotografo 4</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+                    officiis quis optio voluptatem deleniti, labore cumque, debitis
+                    neque, dolor autem consequatur beatae.
+                </p>
+                <a class="smas" href="#"><button>Ver</button></a>
+            </div>
         </div>
     </div>
+
 </body>
 </html>
