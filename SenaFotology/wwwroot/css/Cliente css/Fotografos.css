@@ -190,3 +190,36 @@ body {
     .dropdown-content a:hover {
         background-color: #14150f;
     }
+
+/* Estilos personalizados para Starability */
+
+/* Cambiar el color de fondo de las estrellas */
+.starability-growRotate {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+    .starability-growRotate input[type="radio"] {
+        display: none;
+    }
+
+    .starability-growRotate label {
+        float: right;
+        padding: 0;
+        cursor: pointer;
+        -webkit-transition: .3s ease;
+        transition: .3s ease;
+    }
+
+        .starability-growRotate label:before {
+            content: '\2605';
+            font-size: 25px;
+            color: #000; /* Cambiar color de las estrellas a negro */
+        }
+
+    .starability-growRotate input[type="radio"]:checked ~ label:before,
+    .starability-growRotate input[type="radio"]:checked ~ label {
+        color: #ffcc00; /* Cambiar color de estrellas seleccionadas a amarillo */
+    }
