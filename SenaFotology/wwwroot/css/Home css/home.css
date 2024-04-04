@@ -48,9 +48,9 @@ body {
             }
 
         .header .linksnav a {
-            font-size: 700;
+            font-size: 20px;
             color: #eceff1;
-            text-decoration: none;
+            text-decoration:  dashed;
         }
 
         .header .linksnav li a:hover {
@@ -306,9 +306,9 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #14150f;
+    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -317,12 +317,12 @@ body {
 }
 
 .dropdown-content a {
-    color: black; /* Color del texto negro */
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
     .dropdown-content a:hover {
-        background-color: #14150f;
+        background-color: #f1f1f1;
     }

@@ -1,30 +1,109 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a Fotology</title>
-    <!-- Agrega aquí tus enlaces a hojas de estilo, fuentes, o cualquier otro recurso necesario -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PagPrincipal</title>
+    <link rel="stylesheet" href="~/css/Home css/home.css" />
+    <link rel="icon" href="~/Recursos/LOGOA.png" />
+    <script src="https://kit.fontawesome.com/9bf48cfb4e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div>
-        <h1>Bienvenido a Fotology</h1>
-        <p>
-            Fotology es tu plataforma dedicada a la pasión por la fotografía. Explora un mundo visualmente impactante
-            capturado a través de las lentes de talentosos fotógrafos. Desde retratos cautivadores hasta impresionantes
-            paisajes, estamos aquí para celebrar la diversidad y la creatividad en el arte de la fotografía.
-        </p>
-        <p>
-            La fotografía ha evolucionado a lo largo de los años, convirtiéndose en una forma de arte única y una poderosa
-            herramienta de comunicación. A través de las imágenes, podemos contar historias, expresar emociones y
-            capturar momentos que perdurarán en el tiempo. ¡Únete a nuestra comunidad y comparte tu visión fotográfica!
-        </p>
-        <!-- Puedes agregar más contenido, enlaces o elementos según tus necesidades -->
+    <script src="~/js/dropdown.js"></script>
+
+    <header class="header">
+        <div class="logo">
+            <img src="../Recursos/LOGOA.png" alt="Logo" />
+        </div>
+        <nav>
+            <ul class="linksnav">
+
+                <li><a href="@Url.Action("IniciarSesionFotografo", "Fotografo")">Log in</a></li>
+                <li><a href="@Url.Action("RegistroFotografo", "Registro")">Sing Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="carrusel">
+        <ul>
+            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
+            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
+            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
+            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
+
+        </ul>
+    </div>
+
+    <div class="categorias">
+        <h1>Categorias</h1>
+    
+    </div>
+    <div class="container-card">
+        <div class="card">
+            <figure>
+                <img src="https://media.colombian.com.co/wp-content/uploads/2018/12/04114439/ImagenDestacada-Paisajes-01.jpg" />
+            </figure>
+            <div class="contenido-card">
+                <h3>Paisajes</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+                    officiis quis optio voluptatem deleniti, labore cumque, debitis
+                    neque, dolor autem consequatur beatae.
+                </p>
+
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="https://i.blogs.es/a709d5/kevin-biskaborn/1366_2000.jpg" />
+            </figure>
+            <div class="contenido-card">
+                <h3>Animales</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+                    officiis quis optio voluptatem deleniti, labore cumque, debitis
+                    neque, dolor autem consequatur beatae.
+                </p>
+            
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="https://www.formacionyestudios.com/wp-content/uploads/2018/09/como-ser-modelo.jpg" />
+            </figure>
+            <div class="contenido-card">
+                <h3>Personas</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+                    officiis quis optio voluptatem deleniti, labore cumque, debitis
+                    neque, dolor autem consequatur beatae.
+                </p>
+               
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="https://4.bp.blogspot.com/-_wiVPaJL1UQ/Vu76uPP_RnI/AAAAAAAACHY/iq58X7aV6bYC80JuBxK3OnZptTYJxNaGw/s1600/importancia-decoracion-eventos-sociales.jpg" />
+            </figure>
+            <div class="contenido-card">
+                <h3>Eventos</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+                    officiis quis optio voluptatem deleniti, labore cumque, debitis
+                    neque, dolor autem consequatur beatae.
+                </p>
+          
+            </div>
+        </div>
     </div>
 </body>
 </html>

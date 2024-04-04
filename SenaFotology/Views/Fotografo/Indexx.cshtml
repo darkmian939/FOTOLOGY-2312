@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Cliente/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Barra de navegación -->
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Configuración</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Contenido principal -->
+        <div class="profile">
+            <img src="https://via.placeholder.com/150" alt="Perfil">
+            <h1>Nombre de usuario</h1>
+            <p>Descripción del perfil...</p>
+        </div>
+        <div class="posts">
+            <!-- Formulario para publicar imágenes -->
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="fileInput" name="fileInput" accept="image/*">
+                <button type="submit">Publicar</button>
+            </form>
+            <!-- Aquí puedes iterar sobre las publicaciones del usuario y mostrarlas -->
+            <div class="post">
+                <img src="https://via.placeholder.com/300" alt="Publicación">
+                <p>Descripción de la publicación...</p>
+            </div>
+        </div>
+    </main>
+    <!-- Script para manejar la carga de imágenes -->
+    <script>
+        document.getElementById("uploadForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            // Aquí puedes enviar el formulario con AJAX o a través de una llamada de API
+            // Por simplicidad, este ejemplo solo muestra cómo se envía el formulario
+            fetch('/Upload', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Aquí puedes manejar la respuesta del servidor
+                    console.log('Respuesta del servidor:', data);
+                })
+                .catch(error => {
+                    console.error('Error al enviar el formulario:', error);
+                });
+        });
+    </script>
+</body>
+</html>

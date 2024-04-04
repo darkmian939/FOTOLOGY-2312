@@ -6,12 +6,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de Ayuda - Sitio de Fotografía</title>
-    <script src="https://kit.fontawesome.com/9bf48cfb4e.js"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="~/css/Cliente css/styleayuda.css" />
-
+    <title>PagAyuda</title>
+    <link rel="stylesheet" href="~/css/Cliente css/styleayuda.css" />
+    <link rel="icon" href="~/Recursos/LOGOA.png" />
+    <script src="https://kit.fontawesome.com/9bf48cfb4e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <script src="~/js/dropdown.js"></script>
@@ -34,7 +36,7 @@
                     <div class="dropdown-content">
                         <a href="@Url.Action("PerfilCliente", "Cliente")">Perfil</a>
                         <a href="@Url.Action("Configuraciones", "Cliente")">Configuración</a>
-                        <a href="@Url.Action("Index", "Cliente")">Cerrar sesión</a>
+                        <a href="@Url.Action("Index", "Home")">Cerrar Sesión</a>
                     </div>
                 </li>
             </ul>
