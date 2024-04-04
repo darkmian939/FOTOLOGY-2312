@@ -4,6 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>b4a69e7a-cfaa-4911-a83e-6b3e173bca6e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +12,18 @@
     <Content Remove="Views\Login\**" />
     <EmbeddedResource Remove="Views\Login\**" />
     <None Remove="Views\Login\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="DbContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
