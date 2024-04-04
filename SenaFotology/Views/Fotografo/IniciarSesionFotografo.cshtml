@@ -23,11 +23,18 @@
             {
                 <input type="hidden" name="user-type" value="Usuario">
                 <div class="header">
+<<<<<<< HEAD
                     
                     <a href="@Url.Action("IniciarSesionFotografo", "Home")" class="selected">FOTOGRAFO</a>
                   @*   <a href="@Url.Action("Index", "Cliente")" class="selected">CLIENTE</a>
                     <a href="@Url.Action("IniciarSesionAdministrador", "Admin")" class="selected" >ADMINISTRADOR</a> *@
                    
+=======
+            
+                <a href="@Url.Action("IniciarSesionUsuario", "Home")" class="selected" data-user-type="Usuario">USUARIO</a>
+                    <a href="@Url.Action("IniciarSesionFotografo", "Home")" class="selected" data-user-type="Fotografo">FOTOGRAFO</a>
+                    <a href="@Url.Action("IniciarSesionAdministrador", "Home")" data-user-type="Administrador">ADMINISTRADOR</a>
+>>>>>>> e5237770aabb9ba1211a783e1c8343bf55d8f0a7
                 </div>
                 
                 <hr>
