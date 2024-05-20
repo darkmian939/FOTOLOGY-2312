@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión como Usuario</title>
+    <link rel="stylesheet" href="~/css/Home css/home.css">
+</head>
+<body>
+    <div class="contenedor-form">
+        <div id="usuarioContainer">
+            <form id="Usuario" action="@Url.Action("LoginUsuario", "Home")" method="POST">
+                <div class="header">
+                    <a class="selected" data-user-type="Usuario">USUARIO</a><br>
+                </div>
+                <hr>
+                @if (ViewData["Error"] != null)
+                {
+                    <p class="error">
+                        @ViewData["Error"]
+                    </p>
+                }
+                <div class="fila">
+                    <label for="Email">Usuario</label>
+                    <input type="text" id="Email" name="email">
+                </div>
+                <div class="fila">
+                    <label for="Clave">Contraseña</label>
+                    <input type="password" id="Clave" name="password">
+                </div>
+                <div class="fila">
+                    <br><br>
+                    <input type="checkbox" class="check" id="mantener-sesion" name="mantenerSesion">
+                    <label for="mantener-sesion">Mantener Sesión</label>
+                </div>
+                <input type="submit" value="Iniciar Sesión" class="btn">
+            </form>
+        </div>
+        <p>¿Quieres iniciar sesión como <a href="@Url.Action("InicioFotografo", "Home")">Fotógrafo</a> o <a href="@Url.Action("InicioAdministrador", "Home")">Administrador</a>?</p><br><br>
+        <a href="./recuperar.php" class="olvido">Olvidó la Contraseña</a>
+    </div>
+</body>
+</html>

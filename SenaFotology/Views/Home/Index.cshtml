@@ -10,13 +10,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PagPrincipal</title>
     <link rel="stylesheet" href="~/css/Home css/home.css" />
-    <link rel="icon" href="~/Recursos/LOGOA.png" />
-    <script src="https://kit.fontawesome.com/9bf48cfb4e.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../Recursos/LOGOA.png" />
+    <script src="https://kit.fontawesome.com/9bf48cfb4e.js"
+            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/646ac4fad6.js"
+            crossorigin="anonymous"></script>
 </head>
 <body>
-    <script src="~/js/dropdown.js"></script>
+    <script src="../js/dropdown.js"></script>
 
     <header class="header">
         <div class="logo">
@@ -24,86 +29,59 @@
         </div>
         <nav>
             <ul class="linksnav">
-
-                <li><a href="@Url.Action("IniciarSesionFotografo", "Fotografo")">Log in</a></li>
-                <li><a href="@Url.Action("RegistroFotografo", "Registro")">Sing Up</a></li>
+                <li><a href="@Url.Action("InicioUsuario", "Inicio")">Usuario</a></li>
+                <li><a href="@Url.Action("InicioFotografo", "Inicio")">Fotografo</a></li>
+                <li><a href="@Url.Action("InicioAdministrador", "Inicio")">Administrador</a></li>
             </ul>
         </nav>
     </header>
 
-
-
     <div class="carrusel">
         <ul>
-            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
-            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
-            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
-            <li><img src="~/Recursos/Carr1.jpg" alt="" /></li>
-
+            <li><img src="../Recursos/Carr1.jpg" alt="" /></li>
+            <li><img src="../Recursos/Carr1.jpg" alt="" /></li>
+            <li><img src="../Recursos/Carr1.jpg" alt="" /></li>
+            <li><img src="../Recursos/Carr1.jpg" alt="" /></li>
         </ul>
     </div>
 
-    <div class="categorias">
-        <h1>Categorias</h1>
-    
-    </div>
-    <div class="container-card">
-        <div class="card">
-            <figure>
-                <img src="https://media.colombian.com.co/wp-content/uploads/2018/12/04114439/ImagenDestacada-Paisajes-01.jpg" />
-            </figure>
-            <div class="contenido-card">
-                <h3>Paisajes</h3>
+    <section>
+        <div class="contenedor-nosotros contenedor">
+            <div class="texto-nosotros">
+                <h1>¿Necesitas Ayuda?</h1>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-                    officiis quis optio voluptatem deleniti, labore cumque, debitis
-                    neque, dolor autem consequatur beatae.
+                    La fotografía digital es mucho más que tomar imágenes; es una forma
+                    de arte que fusiona visión, técnica y creatividad. Nos adentramos en
+                    la importancia de la composición, el manejo de la luz y el uso de
+                    herramientas digitales para dar vida a tus ideas con impacto visual.
                 </p>
+                <p>
+                    Desde la majestuosidad de los paisajes hasta la intimidad de los
+                    retratos y la emoción del fotoperiodismo, cada estilo fotográfico es
+                    un viaje único. Aquí encontrarás recursos para explorar diferentes
+                    géneros y descubrir tu propia voz creativa en cada imagen que
+                    captures.
+                </p>
+                <p>
+                    Entendemos que cada fotógrafo enfrenta desafíos y preguntas en su
+                    camino. Ofrecemos asistencia integral, desde tutoriales sobre
+                    equipos y técnicas hasta consejos prácticos para la edición y la
+                    publicación de tus obras. ¡Estamos aquí para apoyarte en cada paso
+                    de tu viaje fotográfico!
+                </p>
+                <p>
+                    Si quieres saber más de nosotros, haz clic en el botón de abajo.
+                </p>
+                <a class="boton" href="@Url.Action("ayuda", "Home")">Ayuda</a>
+            </div>
+        </div>
+    </section>
 
-            </div>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="https://i.blogs.es/a709d5/kevin-biskaborn/1366_2000.jpg" />
-            </figure>
-            <div class="contenido-card">
-                <h3>Animales</h3>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-                    officiis quis optio voluptatem deleniti, labore cumque, debitis
-                    neque, dolor autem consequatur beatae.
-                </p>
-            
-            </div>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="https://www.formacionyestudios.com/wp-content/uploads/2018/09/como-ser-modelo.jpg" />
-            </figure>
-            <div class="contenido-card">
-                <h3>Personas</h3>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-                    officiis quis optio voluptatem deleniti, labore cumque, debitis
-                    neque, dolor autem consequatur beatae.
-                </p>
-               
-            </div>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="https://4.bp.blogspot.com/-_wiVPaJL1UQ/Vu76uPP_RnI/AAAAAAAACHY/iq58X7aV6bYC80JuBxK3OnZptTYJxNaGw/s1600/importancia-decoracion-eventos-sociales.jpg" />
-            </figure>
-            <div class="contenido-card">
-                <h3>Eventos</h3>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-                    officiis quis optio voluptatem deleniti, labore cumque, debitis
-                    neque, dolor autem consequatur beatae.
-                </p>
-          
-            </div>
-        </div>
-    </div>
+    <footer class="footer">
+        <p>
+            Todos los derechos reservados &copy; 2024 al grupo de Fotology,
+            desarrollado por Fotologystudios
+        </p>
+    </footer>
 </body>
 </html>
