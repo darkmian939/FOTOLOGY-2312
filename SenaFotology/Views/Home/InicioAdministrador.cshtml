@@ -7,14 +7,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión como Fotógrafo</title>
-    <link rel="stylesheet" href="~/css/Home css/home.css">
+    <title>Iniciar Sesión como Administrador</title>
+    <link rel="stylesheet" href="~/css/Home y Inicio css/styles.css">
 </head>
 <body>
     <div class="contenedor-form">
-        <form id="Fotografo" action="@Url.Action("LoginFotografo", "Home")" method="POST">
+        <form id="Administrador" action="@Url.Action("PagAdministrador", "Admin")" method="POST">
             <div class="header">
-                <a class="selected" data-user-type="Fotografo">FOTOGRAFO</a><br>
+                <a class="selected" data-user-type="Administrador">ADMINISTRADOR</a><br>
             </div>
             <hr>
             @if (ViewData["Error"] != null)
@@ -24,12 +24,12 @@
                 </p>
             }
             <div class="fila">
-                <label for="username">Nombre de Fotógrafo</label>
-                <input type="text" id="username" name="username">
+                <label for="usuario">Usuario de Administrador</label>
+                <input type="text" id="usuario" name="usuario">
             </div>
             <div class="fila">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña">
             </div>
             <div class="fila">
                 <br><br>
@@ -38,9 +38,8 @@
             </div>
             <input type="submit" value="Iniciar Sesión" class="btn">
         </form>
-        <p>¿Quieres iniciar sesión como <a href="@Url.Action("InicioUsuario", "Home")">Usuario</a> o <a href="@Url.Action("InicioAdministrador", "Home")">Administrador</a>?</p><br><br>
+        <p>¿Quieres iniciar sesión como <a href="@Url.Action("InicioUsuario", "Home")">Usuario</a> o <a href="@Url.Action("InicioFotografo", "Home")">Fotógrafo</a>?</p><br><br>
         <a href="./recuperar.php" class="olvido">Olvidó la Contraseña</a>
     </div>
 </body>
 </html>
-

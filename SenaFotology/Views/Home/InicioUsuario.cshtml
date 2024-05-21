@@ -8,12 +8,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión como Usuario</title>
-    <link rel="stylesheet" href="~/css/Home css/home.css">
+    <link rel="stylesheet" href="~/css/Home y Inicio css/styles.css">
 </head>
 <body>
     <div class="contenedor-form">
         <div id="usuarioContainer">
-            <form id="Usuario" action="@Url.Action("LoginUsuario", "Home")" method="POST">
+            <form id="Usuario" action="@Url.Action("PaginaCliente", "Cliente")" method="POST">
                 <div class="header">
                     <a class="selected" data-user-type="Usuario">USUARIO</a><br>
                 </div>
@@ -41,7 +41,7 @@
             </form>
         </div>
         <p>¿Quieres iniciar sesión como <a href="@Url.Action("InicioFotografo", "Home")">Fotógrafo</a> o <a href="@Url.Action("InicioAdministrador", "Home")">Administrador</a>?</p><br><br>
-        <a href="./recuperar.php" class="olvido">Olvidó la Contraseña</a>
+        <a href="@Url.Action("olvidocontraseña", "Cliente")" class="olvido">Olvidó la Contraseña</a>
     </div>
 </body>
 </html>
