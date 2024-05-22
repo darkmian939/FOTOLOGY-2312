@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Users";
+    var users = ViewBag.Users as List<string>;
+}
+
+<h2>Users</h2>
+
+<ul>
+    @foreach (var user in users)
+    {
+        <li>@user</li>
+    }
+</ul>

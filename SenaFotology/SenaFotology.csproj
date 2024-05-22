@@ -8,16 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="NewFolder\**" />
     <Compile Remove="Views\Login\**" />
     <Compile Remove="wwwroot\css\NewFolder\**" />
-    <Content Remove="NewFolder\**" />
     <Content Remove="Views\Login\**" />
     <Content Remove="wwwroot\css\NewFolder\**" />
-    <EmbeddedResource Remove="NewFolder\**" />
     <EmbeddedResource Remove="Views\Login\**" />
     <EmbeddedResource Remove="wwwroot\css\NewFolder\**" />
-    <None Remove="NewFolder\**" />
     <None Remove="Views\Login\**" />
     <None Remove="wwwroot\css\NewFolder\**" />
   </ItemGroup>
@@ -28,6 +24,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="MySql.Data" Version="8.4.0" />
   </ItemGroup>
 
   <ItemGroup>
