@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Fotógrafos";
+    var fotografos = ViewBag.Fotografos as List<string>;
+}
+
+<h2>Fotógrafos</h2>
+
+<ul>
+    @foreach (var fotografo in fotografos)
+    {
+        <li>@fotografo</li>
+    }
+</ul>

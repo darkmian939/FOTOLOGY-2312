@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Administradores";
+    var administradores = ViewBag.Administradores as List<string>;
+}
+
+<h2>Administradores</h2>
+
+<ul>
+    @foreach (var administrador in administradores)
+    {
+        <li>@administrador</li>
+    }
+</ul>

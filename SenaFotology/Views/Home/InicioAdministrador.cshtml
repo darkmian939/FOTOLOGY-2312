@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="contenedor-form">
+        <div id="adminitradorContainer">
         <form id="Administrador" action="@Url.Action("PagAdministrador", "Admin")" method="POST">
             <div class="header">
                 <a class="selected" data-user-type="Administrador">ADMINISTRADOR</a><br>
@@ -24,12 +25,12 @@
                 </p>
             }
             <div class="fila">
-                <label for="usuario">Usuario de Administrador</label>
-                <input type="text" id="usuario" name="usuario">
+                <label for="Email">Usuario de Administrador</label>
+                <input type="text" id="Email" name="Email">
             </div>
             <div class="fila">
-                <label for="contraseña">Contraseña</label>
-                <input type="password" id="contraseña" name="contraseña">
+                <label for="Clave">Contraseña</label>
+                <input type="password" id="Clave" name="password">
             </div>
             <div class="fila">
                 <br><br>
@@ -38,6 +39,7 @@
             </div>
             <input type="submit" value="Iniciar Sesión" class="btn">
         </form>
+        </div>
         <p>¿Quieres iniciar sesión como <a href="@Url.Action("InicioUsuario", "Home")">Usuario</a> o <a href="@Url.Action("InicioFotografo", "Home")">Fotógrafo</a>?</p><br><br>
         <a href="./recuperar.php" class="olvido">Olvidó la Contraseña</a>
     </div>

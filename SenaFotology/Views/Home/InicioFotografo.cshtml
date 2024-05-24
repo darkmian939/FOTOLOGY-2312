@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="~/css/Home y Inicio css/styles.css">
 </head>
 <body>
+    <div id="fotografoContainer">
     <div class="contenedor-form">
-        <form id="Fotografo" action="@Url.Action("PagFotografo", "Fotografo")" method="POST">
+        <form id="Fotografo" action="@Url.Action("InicioFotografo", "Home")" method="POST">
             <div class="header">
                 <a class="selected" data-user-type="Fotografo">FOTOGRAFO</a><br>
             </div>
@@ -24,12 +25,12 @@
                 </p>
             }
             <div class="fila">
-                <label for="username">Nombre de Fotógrafo</label>
-                <input type="text" id="username" name="username">
+                <label for="Email">Nombre de Fotógrafo</label>
+                <input type="text" id="Email" name="Email">
             </div>
             <div class="fila">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password">
+                <label for="Clave">Contraseña</label>
+                <input type="password" id="Clave" name="password">
             </div>
             <div class="fila">
                 <br><br>
@@ -38,9 +39,13 @@
             </div>
             <input type="submit" value="Iniciar Sesión" class="btn">
         </form>
+        <p>¿No tienes cuenta? <a href="@Url.Action("RegistroFotografo", "Home")">Regístrate aquí</a>.</p>
+        </div>
         <p>¿Quieres iniciar sesión como <a href="@Url.Action("InicioUsuario", "Home")">Usuario</a> o <a href="@Url.Action("InicioAdministrador", "Home")">Administrador</a>?</p><br><br>
         <a href="@Url.Action("olvidocontraseñaFot", "Fotografo")" class="olvido">Olvidó la Contraseña</a>
     </div>
 </body>
 </html>
+
+
 

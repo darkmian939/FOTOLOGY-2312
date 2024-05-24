@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null; // Esto evita que utilices un diseño predeterminado si lo tienes configurado
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -17,34 +17,44 @@
 </head>
 <body>
     <div class="container-form sign-up">
-        <form class="formulario" method="POST" action="registrodefotografo.php">
-            <h2 class="create-account">Crear una cuenta</h2>
-            <div class="iconos">
-                <div class="border-icon">
-                    <i class='bx bxl-facebook-circle'></i>
-                </div>
-                <div class="border-icon">
-                    <i class='bx bxl-gmail'></i>
-                </div>
-                <div class="border-icon">
-                    <i class='bx bxl-microsoft'></i>
+        <div class="container-form sign-up">
+            <div class="welcome-back">
+                <div class="message">
+                    <h2>Bienvenido a Fotology</h2>
+                    <p>Si ya tienes una cuenta, por favor inicia sesión aquí</p>
+                    <a href="@Url.Action("Index", "Cliente")" class="sign-up-btn">Iniciar Sesión</a>
                 </div>
             </div>
-            <p class="cuenta-gratis">Crear una cuenta gratis</p>
-            <input type="text" name="nombre_fotografo" placeholder="nombre" required>
-            <input type="tel" name="telefono" placeholder="telefono" required>
-            <input type="email" name="email" placeholder="email" required>
-            <input type="text" name="direccion" placeholder="direccion" required>
-            <input type="password" name="contrasena" placeholder="contraseña" required>
-            <input type="submit" value="Registrarse" name="registrarse">
-        </form>
+            <form class="formulario" method="POST" action="@Url.Action("RegistroFotografo", "Fotografo")" enctype="multipart/form-data">
+                <h2 class="create-account">Crear una cuenta</h2>
+                <div class="iconos">
+                    <div class="border-icon">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-gmail'></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-microsoft'></i>
+                    </div>
+                </div>
+                <p class="cuenta-gratis">Crear una cuenta gratis</p>
+                <input type="text" name="Nombre_fotografo" placeholder="Nombre" required>
+                <input type="text" name="Descripcion" placeholder="Descripción" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <input type="password" name="Contrasena" placeholder="Contraseña" required>
+                <input type="text" name="Direccion" placeholder="Dirección" required>
+                <input type="tel" name="Telefono" placeholder="Teléfono" required>
+                <h5>Foto de perfil</h5>
+                <input type="file" name="Foto_de_perfil" accept="image/*" required>
+                <input type="submit" value="Registrarse" name="registrarse">
+                <br>
 
-        <div class="welcome-back">
-            <div class="message">
-                <h2>Bienvenido a Fotology</h2>
-                <p>Si ya tienes una cuenta, por favor inicia sesión aquí</p>
-                <button><a href="@Url.Action("IniciarSesionFotografo", "Fotografo")" class="sign-up-btn">Iniciar Sesión</a></button>
-            </div>
+                @if (!string.IsNullOrEmpty(Request.QueryString["exito"]))
+                {
+                    <p class="success">@Request.QueryString["exito"]</p>
+                }
+            </form>
         </div>
     </div>
     <script src="java.js"></script>
