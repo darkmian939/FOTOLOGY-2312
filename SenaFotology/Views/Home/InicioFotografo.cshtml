@@ -12,40 +12,37 @@
 </head>
 <body>
     <div id="fotografoContainer">
-    <div class="contenedor-form">
-        <form id="Fotografo" action="@Url.Action("PagFotografo", "Fotografo")" method="POST">
-            <div class="header">
-                <a class="selected" data-user-type="Fotografo">FOTOGRAFO</a><br>
-            </div>
-            <hr>
-            @if (ViewData["Error"] != null)
-            {
-                <p class="error">
-                    @ViewData["Error"]
-                </p>
-            }
-            <div class="fila">
-                <label for="Email">Nombre de Fotógrafo</label>
-                <input type="text" id="Email" name="Email">
-            </div>
-            <div class="fila">
-                <label for="Clave">Contraseña</label>
-                <input type="password" id="Clave" name="password">
-            </div>
-            <div class="fila">
-                <br><br>
-                <input type="checkbox" class="check" id="mantener-sesion" name="mantenerSesion">
-                <label for="mantener-sesion">Mantener Sesión</label>
-            </div>
-            <input type="submit" value="Iniciar Sesión" class="btn">
-        </form>
-        <p>¿No tienes cuenta? <a href="@Url.Action("RegistroFotografo", "Home")">Regístrate aquí</a>.</p>
+        <div class="contenedor-form">
+            <form id="Fotografo" action="@Url.Action("PaginaFotografo", "Fotografo")" method="POST">
+                <div class="header">
+                    <a class="selected" data-user-type="Fotografo">FOTOGRAFO</a><br>
+                </div>
+                <hr>
+                @if (ViewData["Error"] != null)
+                {
+                    <p class="error">
+                        @ViewData["Error"]
+                    </p>
+                }
+                <div class="fila">
+                    <label for="Email">Nombre de Fotógrafo</label>
+                    <input type="text" id="Email" name="email">
+                </div>
+                <div class="fila">
+                    <label for="Clave">Contraseña</label>
+                    <input type="password" id="Clave" name="password">
+                </div>
+                <div class="fila">
+                    <br><br>
+                    <input type="checkbox" class="check" id="mantener-sesion" name="mantenerSesion">
+                    <label for="mantener-sesion">Mantener Sesión</label>
+                </div>
+                <input type="submit" value="Iniciar Sesión" class="btn">
+            </form>
+            <p>¿No tienes cuenta? <a href="@Url.Action("RegistroFotografo", "Home")">Regístrate aquí</a>.</p>
         </div>
         <p>¿Quieres iniciar sesión como <a href="@Url.Action("InicioUsuario", "Home")">Usuario</a> o <a href="@Url.Action("InicioAdministrador", "Home")">Administrador</a>?</p><br><br>
         <a href="@Url.Action("olvidocontraseñaFot", "Fotografo")" class="olvido">Olvidó la Contraseña</a>
     </div>
 </body>
 </html>
-
-
-
